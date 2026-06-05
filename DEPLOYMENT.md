@@ -22,12 +22,14 @@ Replace the old website with this MERN project on your Hostinger domain.
 
 1. Push this project to **GitHub** (private repo is fine).
 2. Go to [render.com](https://render.com) → **New → Web Service**.
-3. Connect your GitHub repo.
-4. Settings:
+3. Connect your GitHub repo **AsylumTechie/A2s**.
+4. Settings (important — do NOT build the client on Render):
    - **Root Directory:** `server`
    - **Build Command:** `npm install`
    - **Start Command:** `npm start`
    - **Environment:** Node
+
+   > If Root Directory is empty (repo root), Render will try `npm run build` and fail with `vite: not found`. Always set Root Directory to `server` for the API.
 5. Add **Environment Variables:**
 
    ```
