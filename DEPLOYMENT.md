@@ -144,6 +144,25 @@ Use PM2 + Nginx reverse proxy and point the domain to the VPS IP.
 
 ---
 
+## Deploy frontend on Vercel (optional)
+
+1. Import repo **AsylumTechie/A2sclient** on [vercel.com](https://vercel.com).
+2. **Framework Preset:** Vite (or Other).
+3. **Root Directory:** leave empty (uses `vercel.json`) **OR** set to `client`.
+4. If using `client` as root:
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+   - Install Command: `npm install`
+5. Add environment variable:
+   ```
+   VITE_API_URL=https://YOUR-RENDER-APP.onrender.com/api
+   ```
+6. Deploy. Do **not** use repo root build without `vercel.json` — `vite` will not be found.
+
+> Vercel hosts the **website only**. Keep the API on Render (`server` folder).
+
+---
+
 ## Need help?
 
 Share your Hostinger plan type (Shared / Business / VPS) and whether you use GitHub — we can narrow steps further.
