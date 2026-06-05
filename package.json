@@ -1,0 +1,19 @@
+{
+  "name": "a2s-ecommerce-solutions",
+  "version": "1.0.0",
+  "description": "A2S eCommerce Solutions - MERN Stack Web Application",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "start:prod": "npm run build && cd server && npm start",
+    "seed": "cd server && npm run seed"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
