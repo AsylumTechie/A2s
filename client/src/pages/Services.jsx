@@ -4,7 +4,7 @@ import * as Icons from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import ServiceCard from '../components/ServiceCard';
 import InquiryForm from '../components/InquiryForm';
-import { getServices } from '../api/client';
+import { loadServices } from '../api/serviceHelpers';
 import { serviceCategories } from '../data/siteData';
 
 export default function Services() {
@@ -16,8 +16,8 @@ export default function Services() {
   useEffect(() => {
     setLoading(true);
     const params = activeCategory ? { category: activeCategory } : {};
-    getServices(params)
-      .then((res) => setServices(res.data.data))
+    loadServices(params)
+      .then((data) => setServices(Array.isArray(data) ? data : []))
       .catch(() => setServices([]))
       .finally(() => setLoading(false));
   }, [activeCategory]);
@@ -82,10 +82,7 @@ export default function Services() {
               ))}
             </div>
           ) : (
-            <p className="text-center text-slate-500">
-              No services found. Run <code className="rounded bg-slate-100 px-2 py-1">npm run seed</code> in the
-              server folder to load demo data.
-            </p>
+            <p className="text-center text-slate-500">No services found for this category.</p>
           )}
         </div>
       </section>

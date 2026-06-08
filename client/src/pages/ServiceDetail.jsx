@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import * as Icons from 'lucide-react';
 import { ArrowLeft, CheckCircle } from 'lucide-react';
-import { getServiceBySlug } from '../api/client';
+import { loadServiceBySlug } from '../api/serviceHelpers';
 import InquiryForm from '../components/InquiryForm';
 
 export default function ServiceDetail() {
@@ -13,8 +13,11 @@ export default function ServiceDetail() {
 
   useEffect(() => {
     setLoading(true);
-    getServiceBySlug(slug)
-      .then((res) => setService(res.data.data))
+    loadServiceBySlug(slug)
+      .then((data) => {
+        if (data) setService(data);
+        else setError(true);
+      })
       .catch(() => setError(true))
       .finally(() => setLoading(false));
   }, [slug]);

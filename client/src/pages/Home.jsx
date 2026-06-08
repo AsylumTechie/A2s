@@ -4,7 +4,7 @@ import * as Icons from 'lucide-react';
 import { useEffect, useState } from 'react';
 import Stats from '../components/Stats';
 import ServiceCard from '../components/ServiceCard';
-import { getServices } from '../api/client';
+import { loadServices } from '../api/serviceHelpers';
 import {
   companyInfo,
   heroContent,
@@ -22,8 +22,8 @@ export default function Home() {
   const [featuredServices, setFeaturedServices] = useState([]);
 
   useEffect(() => {
-    getServices({ featured: 'true' })
-      .then((res) => setFeaturedServices(res.data.data.slice(0, 6)))
+    loadServices({ featured: 'true' })
+      .then((data) => setFeaturedServices((Array.isArray(data) ? data : []).slice(0, 6)))
       .catch(() => setFeaturedServices([]));
   }, []);
 
