@@ -58,15 +58,20 @@ app.use('/api/contact', contactRoutes);
 app.use('/api/inquiries', inquiryRoutes);
 app.use('/api/services', serviceRoutes);
 
-if (isProduction) {
-  const clientDist = path.join(__dirname, '../client/dist');
-  app.use(express.static(clientDist));
-  app.get('*', (req, res) => {
-    if (!req.path.startsWith('/api')) {
-      res.sendFile(path.join(clientDist, 'index.html'));
-    }
-  });
-}
+// NOTE:
+// - On Render we deploy ONLY the API (no built React app in ../client/dist)
+// - The frontend is hosted separately (Vercel/Hostinger)
+// Serving static files here causes ENOENT when client/dist is missing.
+// If you later co-host the frontend on the same server, re-enable this block.
+// if (isProduction) {
+//   const clientDist = path.join(__dirname, '../client/dist');
+//   app.use(express.static(clientDist));
+//   app.get('*', (req, res) => {
+//     if (!req.path.startsWith('/api')) {
+//       res.sendFile(path.join(clientDist, 'index.html'));
+//     }
+//   });
+// }
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
