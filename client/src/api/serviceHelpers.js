@@ -1,6 +1,10 @@
 import { getServices, getServiceBySlug } from './client';
 import { demoServices } from '../data/demoServices';
 
+const slugAliases = {
+  'ecommerce-product-listing': 'ecommerce-account-management',
+};
+
 function isValidServiceList(data) {
   return Array.isArray(data) && data.length > 0 && data[0]?.title;
 }
@@ -30,13 +34,14 @@ export async function loadServices(params = {}) {
 }
 
 export async function loadServiceBySlug(slug) {
+  const resolvedSlug = slugAliases[slug] || slug;
   try {
-    const res = await getServiceBySlug(slug);
+    const res = await getServiceBySlug(resolvedSlug);
     if (res?.data?.data?.slug) {
       return res.data.data;
     }
   } catch {
     // fall through to demo data
   }
-  return demoServices.find((s) => s.slug === slug) || null;
+  return demoServices.find((s) => s.slug === resolvedSlug) || null;
 }

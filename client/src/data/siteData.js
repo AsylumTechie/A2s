@@ -1,5 +1,5 @@
 export const companyInfo = {
-  name: 'A2S eCom Solutions',
+  name: 'A2S Ecom Solutions',
   shortName: 'A2secomsolutions',
   tagline: 'Your growth partners committed to delivering exceptional results',
   phone: '+91-8504823748',
@@ -48,8 +48,8 @@ export const homepageServices = [
     color: 'from-violet-500 to-purple-500',
   },
   {
-    title: 'E-commerce Management',
-    description: 'Scale your online store with expert account management',
+    title: 'E-Commerce Account Management',
+    description: 'Grow your online business with professional marketplace account management',
     category: 'ecommerce-setup',
     icon: 'ShoppingCart',
     color: 'from-emerald-500 to-teal-500',
@@ -122,8 +122,8 @@ export const serviceCategories = [
   },
   {
     id: 'ecommerce-setup',
-    title: 'E-commerce Management',
-    description: 'Scale your online store with expert account management',
+    title: 'E-Commerce Account Management',
+    description: 'Grow your online business with professional marketplace account management',
     icon: 'ShoppingCart',
     color: 'from-emerald-500 to-teal-500',
   },

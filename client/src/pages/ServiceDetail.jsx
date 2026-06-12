@@ -67,7 +67,13 @@ export default function ServiceDetail() {
           <div className="grid gap-12 lg:grid-cols-3">
             <div className="lg:col-span-2">
               <h2 className="font-display text-2xl font-bold text-slate-900">Overview</h2>
-              <p className="mt-4 leading-relaxed text-slate-600">{service.description}</p>
+              <div className="mt-4 space-y-4">
+                {service.description.split('\n\n').map((paragraph) => (
+                  <p key={paragraph.slice(0, 40)} className="leading-relaxed text-slate-600">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
               {service.features?.length > 0 && (
                 <>
                   <h3 className="mt-8 font-display text-xl font-semibold text-slate-900">Key Features</h3>
