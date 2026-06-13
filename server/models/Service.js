@@ -20,6 +20,12 @@ const serviceSchema = new mongoose.Schema(
     description: { type: String, required: true },
     icon: { type: String, default: 'Globe' },
     features: [{ type: String }],
+    featureSections: [
+      {
+        title: { type: String },
+        items: [{ type: String }],
+      },
+    ],
     order: { type: Number, default: 0 },
     isFeatured: { type: Boolean, default: false },
   },

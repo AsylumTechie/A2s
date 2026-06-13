@@ -92,18 +92,36 @@ export default function ServiceDetail() {
                   </p>
                 ))}
               </div>
-              {service.features?.length > 0 && (
-                <>
-                  <h3 className="mt-8 font-display text-xl font-semibold text-slate-900">Key Features</h3>
-                  <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-                    {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-2 text-sm text-slate-600">
-                        <CheckCircle size={18} className="shrink-0 text-brand-600" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </>
+              {service.featureSections?.length > 0 ? (
+                <div className="mt-8 space-y-8">
+                  {service.featureSections.map((section) => (
+                    <div key={section.title}>
+                      <h3 className="font-display text-xl font-semibold text-slate-900">{section.title}</h3>
+                      <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+                        {section.items.map((item) => (
+                          <li key={item} className="flex items-start gap-2 text-sm text-slate-600">
+                            <CheckCircle size={18} className="mt-0.5 shrink-0 text-brand-600" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                service.features?.length > 0 && (
+                  <>
+                    <h3 className="mt-8 font-display text-xl font-semibold text-slate-900">Key Features</h3>
+                    <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+                      {service.features.map((feature) => (
+                        <li key={feature} className="flex items-center gap-2 text-sm text-slate-600">
+                          <CheckCircle size={18} className="shrink-0 text-brand-600" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                )
               )}
             </div>
             <div className="rounded-2xl border border-slate-100 bg-slate-50 p-6">
