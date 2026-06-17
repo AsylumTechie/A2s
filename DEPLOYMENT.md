@@ -1,4 +1,4 @@
-# Deploy A2S to a2secomsolutions.com (Hostinger)
+# Deploy A2S to a2secomsolution.com (Hostinger)
 
 Replace the old website with this MERN project on your Hostinger domain.
 
@@ -36,7 +36,7 @@ Replace the old website with this MERN project on your Hostinger domain.
    NODE_ENV=production
    PORT=10000
    MONGODB_URI=your_atlas_connection_string
-   CLIENT_URL=https://a2secomsolutions.com
+   CLIENT_URL=https://www.a2secomsolution.com
    ```
 
 6. Deploy and copy your URL, e.g. `https://a2s-api.onrender.com`.
@@ -73,7 +73,7 @@ This creates `client/dist/` — that folder is your new website.
 ## Part 3 — Replace the old site on Hostinger
 
 1. Log in to [Hostinger hPanel](https://hpanel.hostinger.com).
-2. Go to **Websites** → select **a2secomsolutions.com** → **Manage**.
+2. Go to **Websites** → select **a2secomsolution.com** → **Manage**.
 3. Open **File Manager** (or use FTP with FileZilla).
 4. Open the **`public_html`** folder.
 5. **Backup old site (optional):** Select all files → compress to `old-site-backup.zip` → download.
@@ -90,10 +90,10 @@ This creates `client/dist/` — that folder is your new website.
 
 ## Part 4 — Domain & SSL
 
-1. In hPanel → **Domains** → **a2secomsolutions.com** → **Manage**.
+1. In hPanel → **Domains** → **a2secomsolution.com** → **Manage**.
 2. Confirm domain points to your hosting (usually automatic).
-3. Go to **SSL** → enable **Free SSL** for `a2secomsolutions.com` and `www`.
-4. Wait 5–15 minutes, then visit **https://a2secomsolutions.com**.
+3. Go to **SSL** → enable **Free SSL** for `a2secomsolution.com` and `www`.
+4. Wait 5–15 minutes, then visit **https://www.a2secomsolution.com**.
 
 ---
 
@@ -126,7 +126,7 @@ Use PM2 + Nginx reverse proxy and point the domain to the VPS IP.
 
 ## Checklist after deploy
 
-- [ ] https://a2secomsolutions.com loads the new home page
+- [ ] https://www.a2secomsolution.com loads the new home page
 - [ ] `/about`, `/services`, `/contact` work (no 404)
 - [ ] Contact form submits (needs API + MongoDB)
 - [ ] SSL padlock shows in browser

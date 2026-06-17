@@ -1,5 +1,5 @@
 export const siteUrl = (
-  import.meta.env.VITE_SITE_URL || 'https://a2secomsolutions.com'
+  import.meta.env.VITE_SITE_URL || 'https://www.a2secomsolution.com'
 ).replace(/\/$/, '');
 
 export const siteName = 'A2S Ecom Solutions';

@@ -20,8 +20,8 @@ const isProduction = process.env.NODE_ENV === 'production';
 const allowedOrigins = [
   process.env.CLIENT_URL,
   'http://localhost:5173',
-  'https://a2secomsolutions.com',
-  'https://www.a2secomsolutions.com',
+  'https://a2secomsolution.com',
+  'https://www.a2secomsolution.com',
 ].filter(Boolean);
 
 app.use(

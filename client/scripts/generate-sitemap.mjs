@@ -4,7 +4,7 @@ import { dirname, join } from 'path';
 import { getSitemapPaths } from './routes.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const siteUrl = (process.env.VITE_SITE_URL || 'https://a2secomsolutions.com').replace(/\/$/, '');
+const siteUrl = (process.env.VITE_SITE_URL || 'https://www.a2secomsolution.com').replace(/\/$/, '');
 
 const urls = getSitemapPaths();
 const today = new Date().toISOString().split('T')[0];
