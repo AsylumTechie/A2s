@@ -75,7 +75,7 @@ const whyChooseUs = [
   },
   {
     title: 'Affordable Pricing',
-    text: 'Professional consultation at an unbeatable price of ₹999 only.',
+    text: 'Professional consultation at an unbeatable price of ₹1 only.',
   },
   {
     title: 'Personalized Support',
@@ -93,7 +93,7 @@ const processSteps = [
 
 const phoneDigits = companyInfo.phone.replace(/\D/g, '');
 const whatsappUrl = `https://wa.me/${phoneDigits}?text=${encodeURIComponent(
-  'Hi A2S Ecom Solutions, I want to book the ₹999 E-Commerce Seller Growth Consultation.'
+  'Hi A2S Ecom Solutions, I want to book the ₹1 E-Commerce Seller Growth Consultation.'
 )}`;
 
 export default function ConsultationPopup() {
@@ -139,8 +139,8 @@ export default function ConsultationPopup() {
           aria-label="Open consultation offer"
         >
           <Sparkles size={18} />
-          <span className="hidden sm:inline">₹999 Consultation</span>
-          <span className="sm:hidden">₹999</span>
+          <span className="hidden sm:inline">₹1 Consultation</span>
+          <span className="sm:hidden">₹1</span>
         </button>
       )}
 
@@ -177,7 +177,7 @@ export default function ConsultationPopup() {
               <h2 id="consultation-popup-title" className="mt-4 font-display text-2xl font-bold leading-tight sm:text-3xl">
                 E-Commerce Seller Growth Consultation
               </h2>
-              <p className="mt-2 text-3xl font-bold text-brand-100 sm:text-4xl">₹999 Only</p>
+              <p className="mt-2 text-3xl font-bold text-brand-100 sm:text-4xl">₹1 Only</p>
               <p className="mt-3 max-w-xl text-sm leading-relaxed text-brand-100/95 sm:text-base">
                 Grow your online sales with expert e-commerce consultation for Amazon, Flipkart, Meesho,
                 JioMart, Myntra, and more.
@@ -188,7 +188,7 @@ export default function ConsultationPopup() {
               <p className="text-sm leading-relaxed text-slate-600 sm:text-base">
                 Are you struggling with low sales, poor product visibility, account issues, or marketplace
                 management? Our professional consultation is designed to help sellers maximize growth and
-                increase profits. For just <strong className="text-brand-700">₹999</strong>, get expert
+                increase profits. For just <strong className="text-brand-700">₹1</strong>, get expert
                 guidance and actionable strategies to improve your online business performance.
               </p>
 
@@ -264,7 +264,7 @@ export default function ConsultationPopup() {
               <div className="rounded-2xl border-2 border-dashed border-accent-400/50 bg-gradient-to-br from-amber-50 to-orange-50 p-5 text-center">
                 <p className="text-sm font-semibold uppercase tracking-wide text-accent-600">Special Offer</p>
                 <p className="mt-2 font-display text-xl font-bold text-slate-900">
-                  Complete E-Commerce Seller Consultation for Just ₹999
+                  Complete E-Commerce Seller Consultation for Just ₹1
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
                   Get expert insights, marketplace strategies, listing optimization recommendations, and a
@@ -279,7 +279,7 @@ export default function ConsultationPopup() {
                   Stop guessing and start growing with professional guidance.
                 </p>
                 <p className="mt-4 font-semibold text-brand-200">
-                  Book Your E-Commerce Consultation Today – Only ₹999
+                  Book Your E-Commerce Consultation Today – Only ₹1
                 </p>
               </div>
             </div>
@@ -287,7 +287,7 @@ export default function ConsultationPopup() {
             <div className="shrink-0 border-t border-slate-100 bg-white px-6 py-4 sm:px-8">
               <div className="flex flex-col gap-3 sm:flex-row">
                 <Link to="/pay" onClick={close} className="btn-primary flex-1 justify-center">
-                  Book Consultation – ₹999
+                  Book Consultation – ₹1
                   <ChevronRight size={18} />
                 </Link>
                 <a
