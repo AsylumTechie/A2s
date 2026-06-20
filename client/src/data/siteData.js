@@ -209,32 +209,32 @@ export const pricingPlans = [
 
 export const testimonials = [
   {
-    name: 'Sarah Johnson',
-    company: 'CEO, TechStart Inc',
+    name: 'Priya Sharma',
+    company: 'CEO, JaipurCraft Exports',
     text: 'Working with A2S Ecom Solutions transformed our online presence completely. Their team delivered beyond our expectations, and our website traffic increased by 300% in just 3 months.',
     rating: 5,
-    image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200',
+    image: 'https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop',
   },
   {
-    name: 'Michael Chen',
-    company: 'Founder, EcoStore',
-    text: 'The e-commerce management service is outstanding. Our sales doubled within the first quarter, and the team\'s attention to detail is exceptional.',
+    name: 'Rahul Mehta',
+    company: 'Founder, DesiHome Store (Amazon Seller)',
+    text: 'The e-commerce account management service is outstanding. Our Amazon sales doubled within the first quarter, and the team\'s attention to listing optimization and ads is exceptional.',
     rating: 5,
-    image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200',
+    image: 'https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop',
   },
   {
-    name: 'Emily Rodriguez',
-    company: 'Marketing Director, FitLife',
-    text: 'A2S Ecom Solutions\' digital marketing strategies are data-driven and effective. They helped us reach our target audience and significantly improved our ROI.',
+    name: 'Ananya Gupta',
+    company: 'Marketing Head, FitLife India',
+    text: 'A2S Ecom Solutions\' digital marketing strategies are data-driven and effective. They helped us reach customers across Rajasthan and significantly improved our ROI.',
     rating: 5,
-    image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200',
+    image: 'https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop',
   },
   {
-    name: 'David Park',
-    company: 'Owner, Artisan Bakery',
-    text: 'From branding to website development, every aspect was handled professionally. Our new brand identity perfectly represents our values.',
+    name: 'Vikram Singh',
+    company: 'Owner, Rajasthan Handlooms',
+    text: 'From branding to website development, every aspect was handled professionally. Our new brand identity and Flipkart store setup perfectly represent our traditional craft business.',
     rating: 5,
-    image: 'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=200',
+    image: 'https://images.pexels.com/photos/3771070/pexels-photo-3771070.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop',
   },
 ];
 
