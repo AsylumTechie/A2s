@@ -20,7 +20,7 @@ export default function Payment() {
     name: '',
     email: '',
     phone: '',
-    amount: 1,
+    amount: 999,
     description: 'E-Commerce Seller Growth Consultation',
   });
   const [loading, setLoading] = useState(false);
@@ -95,7 +95,7 @@ export default function Payment() {
     <>
       <SEO
         title="Pay Online - UPI, Cards & Wallets | A2S Ecom Solutions"
-        description="Book your ₹1 E-Commerce Seller Growth Consultation. Pay securely via UPI, PhonePe, GPay, Paytm, cards, and netbanking."
+        description="Book your ₹999 E-Commerce Seller Growth Consultation. Pay securely via UPI, PhonePe, GPay, Paytm, cards, and netbanking."
         path="/pay"
         noindex
       />
